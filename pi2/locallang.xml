@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_ptgsavoucher_pi2&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="fl_note1_1">Mode 1</label>
+			<label index="list_mode_2">Mode 2</label>
+			<label index="list_mode_3">Mode 3</label>
+			<label index="back">Back</label>
+			<label index="submit_button_label">Click here to submit value</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="bl_encash">Einlösen</label>
+			<label index="fl_note1">Möchten Sie einen neuen Geschenkgutschein einlösen?</label>
+			<label index="fl_note2">Geben Sie den Gutscheincode in das Feld ein. Wir schreiben Ihnen anschließend den Betrag Ihrem Konto gut.</label>
+			<label index="fl_note3">Bitte beachten Sie: Aktionsgutscheine können nur im Verlauf einer Bestellung eingelöst werden.</label>
+		</languageKey>
+	</data>
+</T3locallang>

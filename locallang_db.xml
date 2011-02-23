@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'pt_gsavoucher'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_ptgsavoucher_voucher">Voucher data</label>
+			<label index="tx_ptgsavoucher_voucher.type">Voucher Type</label>
+			<label index="tx_ptgsavoucher_voucher.type.I.0">Standard Voucher</label>
+			<label index="tx_ptgsavoucher_voucher.type.I.1">Multi Encash Voucher</label>
+			<label index="tx_ptgsavoucher_voucher.code">Voucher Code</label>
+			<label index="tx_ptgsavoucher_voucher.pdfdoc_uid">PDF Document Id</label>
+            <label index="tx_ptgsavoucher_voucher.order_wrapper_uid">Order Wrapper Uid</label>
+			<label index="tx_ptgsavoucher_voucher.gsa_uid">GSA Customer order</label>
+			<label index="tx_ptgsavoucher_voucher.related_doc_no">GSA Document Number order</label>
+			<label index="tx_ptgsavoucher_voucher.category_confinement">Category confining voucher</label>
+			<label index="tx_ptgsavoucher_voucher.article_confinement">Article ID confining voucher</label>
+			<label index="tx_ptgsavoucher_voucher.amount">Amount of voucher</label>
+			<label index="tx_ptgsavoucher_voucher.is_percent">Amount is percent</label>
+            <label index="tx_ptgsavoucher_voucher.once_per_order">Only one voucher per order</label>
+            <label index="tx_ptgsavoucher_voucher.is_encashed">Voucher is encashed</label>
+            <label index="tx_ptgsavoucher_voucher.encashed_amount">Total amount encashed for this voucher</label>
+			<label index="tx_ptgsavoucher_voucher.expiry_date">Expiry date</label>
+            <label index="tx_ptgsavoucher_voucher_encash">Voucher encashing</label>
+            <label index="tx_ptgsavoucher_voucher_encash.uid">Voucher Id</label>
+            <label index="tx_ptgsavoucher_voucher_encash.order_wrapper_uid">GSA Order Wrapper Uid</label>
+            <label index="tx_ptgsavoucher_voucher_encash.gsa_uid">Id of GSA Customer</label>
+            <label index="tx_ptgsavoucher_voucher_encash.discount_percent">Discount in Percent</label>
+            <label index="tx_ptgsavoucher_voucher_encash.related_doc_no">GSA Document Number encashing</label>
+            <label index="tx_ptgsavoucher_voucher_encash.article_uid">Article Id if confinement for article</label>
+            <label index="tx_ptgsavoucher_voucher_encash.amount">Amount of encashing</label>
+            <label index="tx_ptgsavoucher_voucher_encash.encash_date">Encashing date</label>
+            <label index="tt_content.list_type_pi1">GSA Show Voucher</label>
+            <label index="tt_content.list_type_pi2">GSA Encash Voucher</label>
+            <label index="tt_content.list_type_pi3">Plugin3</label>
+            <label index="tt_content.list_type_pi4">Plugin4</label>
+            <label index="tx_ptgsapdfdocs_documents.documenttype.voucher">Voucher</label>
+        </languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_ptgsavoucher_voucher">Gutschein Daten</label>
+			<label index="tx_ptgsavoucher_voucher.type">Gutscheintyp</label>
+			<label index="tx_ptgsavoucher_voucher.type.I.0">Standard Gutschein</label>
+			<label index="tx_ptgsavoucher_voucher.type.I.1">Mehrmals verwendbarer Gutschein</label>
+			<label index="tx_ptgsavoucher_voucher.code">Gutschein Code</label>
+			<label index="tx_ptgsavoucher_voucher.pdfdoc_uid">PDF Dokument Id</label>
+            <label index="tx_ptgsavoucher_voucher.order_wrapper_uid">Bestell Wrapper Id</label>
+			<label index="tx_ptgsavoucher_voucher.related_doc_no">GSA Dokumentnummer Bestellung</label>
+			<label index="tx_ptgsavoucher_voucher.category_confinement">Einschränkung Kategorie</label>
+			<label index="tx_ptgsavoucher_voucher.article_confinement">Einschränkung Artikel</label>
+			<label index="tx_ptgsavoucher_voucher.amount">Betrag</label>
+			<label index="tx_ptgsavoucher_voucher.is_percent">Betrag is prozentual</label>
+            <label index="tx_ptgsavoucher_voucher.once_per_order">Nur ein Gutschein pro Bestellung</label>
+            <label index="tx_ptgsavoucher_voucher.is_encashed">Gutschein wurde eingelöst</label>
+			<label index="tx_ptgsavoucher_voucher.encashed_amount">Summer Eingelöster Beträge</label>
+			<label index="tx_ptgsavoucher_voucher.expiry_date">Verfalldatum</label>
+            <label index="tx_ptgsavoucher_voucher_encash">Gutschein Einlösung</label>
+            <label index="tx_ptgsavoucher_voucher_encash.uid">Gutschein Nummer</label>
+            <label index="tx_ptgsavoucher_voucher_encash.order_wrapper_uid">Bestell Wrapper Id</label>
+            <label index="tx_ptgsavoucher_voucher_encash.gsa_uid">GSA Kunden ID</label>
+            <label index="tx_ptgsavoucher_voucher_encash.discount_percent">Rabatt in Prozent</label>
+            <label index="tx_ptgsavoucher_voucher_encash.related_doc_no">GSA Dokumentnummer Einlösung</label>
+            <label index="tx_ptgsavoucher_voucher_encash.article_uid">Article Id falls Einschränkung auf Artikel</label>
+            <label index="tx_ptgsavoucher_voucher_encash.amount">Eingelöster Betrag</label>
+            <label index="tx_ptgsavoucher_voucher_encash.encash_date">Datum der Einlösung</label>
+			<label index="tt_content.list_type_pi1">GSA Gutschein ansehen</label>
+			<label index="tt_content.list_type_pi2">GSA Gutschein einlösen</label>
+			<label index="tt_content.list_type_pi3">Plugin3</label>
+			<label index="tt_content.list_type_pi4">Plugin4</label>
+			<label index="tx_ptgsapdfdocs_documents.documenttype.voucher">Gutschein</label>
+		</languageKey>
+	</data>
+</T3locallang>

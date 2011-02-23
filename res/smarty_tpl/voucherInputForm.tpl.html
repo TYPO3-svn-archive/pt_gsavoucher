@@ -1,0 +1,21 @@
+{* Smarty *}
+{* Detail template for pt_gsavoucher "Voucher Input form"; Author: Dorit Rottner <rottner@punkt.de>, since 2008-01-23 *}
+  <form name="manage_form" method="post" action="{$fv_action}">
+  <div class="tx-pt_gsavoucher_content">
+  
+  	<div id="rowhead1" class="formRow">
+		<span class="tx-ptgsavoucher-txt2">{$fl_note1}</span><br />
+		<span class="tx-ptgsavoucher-txt">{$fl_note2}</span><br />
+		<span class="tx-ptgsavoucher-txt">{$fl_note3}</span>
+	</div>
+  	<div id="row01" class="formRow">
+		<div class="tx-ptgsavoucher-col1"><input type="text" name="{$tx_prefix}[voucherCode]" value="{$fv_voucherCode}" /></div>
+		<div class="tx-ptgsavoucher-col2"><input type="submit" name="{$tx_prefix}[encash_voucher]" value="{$bl_encash}" />
+		</div>
+	</div>
+	<br /><br />	
+
+</div>
+
+</form>
+ 

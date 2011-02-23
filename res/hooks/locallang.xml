@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>language labels for pdf generation</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="bl_encash_voucher">Encash Voucher</label>
+			<label index="fl_overview_voucher">Voucher</label>
+            <label index="fl_encashed_voucher">Voucher with Code &quot;%s&quot; encashed</label>
+            <label index="fl_voucher_code">Voucher code</label>
+            <label index="fl_payment_amount">Payment Amount</label>
+            <label index="fl_delivery_notice">This order contains the encashing of voucher(s). Please be aware that the payment amount could be different from the delivery sum.</label>
+            <label index="fl_delivery_notice_mail1">This order contains the encashing of voucher(s).</label>
+            <label index="fl_delivery_notice_mail2">Please be aware that the payment amount could be different from the delivery sum.</label>
+            <label index="overview_paymentNotice_bt">You'll get all needed bank account information for your bank transfer on the invoice.</label>
+            <label index="overview_paymentNotice_cc">The credit card payment will be processed on the following page after you've submitted your order.</label>
+            <label index="overview_paymentNotice_dd">The order total will be debited from this account within in the next days.</label>
+            <label index="msg_error_1">Voucher Code is not valid.</label>
+            <label index="msg_error_2">Voucher is already encashed.</label>
+            <label index="msg_error_3">Voucher Code is not valid.</label>
+            <label index="msg_error_4">Voucher Code is not valid.</label>
+            <label index="msg_error_5">Voucher Code is not valid.</label>
+            <label index="msg_error_6">Voucher could not be encashed for this article.</label>
+            <label index="msg_error_7">You can encash only one discount voucher per order.</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="bl_encash_voucher">Gutschein einlösen</label>
+			<label index="fl_overview_voucher">Gutschein</label>
+            <label index="fl_encashed_voucher">Gutschein mit Code &quot;%s&quot; eingelöst</label>
+            <label index="fl_voucher_code">Gutschein Code</label>
+            <label index="fl_payment_amount">Zahlungsbetrag</label>
+            <label index="fl_delivery_notice">Bei dieser Bestellung wurde(n) Gutschein(e) eingelöst. Der Zahlungsbetrag kann deshalb von der Liefersumme abweichen.</label>
+            <label index="fl_delivery_notice_mail1">Bei dieser Bestellung wurde(n) Gutschein(e) eingelöst.</label>
+            <label index="fl_delivery_notice_mail2">Der Zahlungsbetrag kann deshalb von der Liefersumme abweichen.</label>
+            <label index="overview_paymentNotice_bt">Die Kontodaten für die Überweisung erhalten Sie auf der Rechnung.</label>
+            <label index="overview_paymentNotice_cc">Die Kreditkartenzahlung erfolgt nach Absenden der Bestellung auf der folgenden Seite.</label>
+            <label index="overview_paymentNotice_dd">Der Zahlungsbetrag wird in den nächsten Tagen von oben genanntem Konto abgebucht.</label>
+            <label index="msg_error_1">Gutschein Code ist nicht gültig</label>
+            <label index="msg_error_2">Gutschein ist breits eingelöst</label>
+            <label index="msg_error_3">Gutschein Code ist nicht gültig</label>
+            <label index="msg_error_4">Gutschein Code ist nicht gültig</label>
+            <label index="msg_error_5">Gutschein Code ist nicht gültig</label>
+            <label index="msg_error_6">Gutschein kann für Artikel in dieser Bestellung nicht eingelöst werden.</label>
+            <label index="msg_error_7">Es kann nur ein Rabattgutschein pro Bestellung eingelöst werden.</label>
+        </languageKey>
+    </data>
+</T3locallang>
+

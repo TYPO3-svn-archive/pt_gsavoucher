@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>language labels for pdf generation</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+			<label index="voucher">Voucher</label>
+			<label index="voucherCode">Voucher Code</label>
+			<label index="date">Date</label>
+			<label index="amount">Amount</label>
+			<label index="questionsNote">If you have questions regarding this voucher, feel free to write us an e-mail to %s or give us a call at %s</label>
+			<label index="page">- Page %s -</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+			<label index="voucher">Gutschein</label>
+			<label index="voucherCode">Gutschein Code</label>
+			<label index="date">Datum</label>
+			<label index="amount">Betrag</label>
+			<label index="questionsNote">Fragen oder Anmerkungen zum Gutschein? Schreiben Sie uns eine E-Mail an %s oder rufen Sie uns unter der Telefonnummer %s an.</label>
+			<label index="page">- Seite %s -</label>
+        </languageKey>
+    </data>
+</T3locallang>

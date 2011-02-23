@@ -1,0 +1,30 @@
+    <!--{strip}-->
+    <!-- Main configuration -->
+    <!--{assign var="borderLeft" value="20"}-->
+    <!--{assign var="borderRight" value="25"}-->
+    <!--{assign var="paperWidth" value="210"}-->
+    <!--{assign var="paperHeight" value="297"}-->
+
+    <!-- Table configuration -->
+    <!--{assign_array var="colpos" values="20,40,140,160"}-->
+    <!--{assign_array var="colwidths" values="20,100,20,25"}-->
+    <!--{assign_array var="colaligns" values="C,L,R,R"}-->
+    <!--{/strip}-->
+    
+
+
+		<!-- Additional "afterTableSnippets" -->
+            <setfont family="Arial" style="" size="10" />
+            <ln />
+		<!--{foreach from=$voucher_encashArr key=key item=encash}-->
+            <!--{assign var="col" value="2"}-->
+            <cell x="<!--{$colpos[$col]}-->" w="<!--{$colwidths[$col]}-->" align="<!--{$colaligns[$col]}-->"><!--{"fl_encashed_voucher"|ll:$encash.voucher_code}-->:</cell>
+            <!--{assign var="col" value="3"}-->
+            <cell x="<!--{$colpos[$col]}-->" w="<!--{$colwidths[$col]}-->" align="<!--{$colaligns[$col]}-->" border="0">- <!--{$encash.voucher_amount|wrap:"| €"}--></cell>
+            <ln />
+		<!--{/foreach}-->
+        <line x1="<!--{$colpos[$col]}-->" x2="<!--{$paperWidth-$borderRight}-->" width="default" />
+
+        
+        
+		

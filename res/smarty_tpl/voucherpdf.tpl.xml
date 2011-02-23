@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document orientation="P" unit="mm" format="A4"><!--{strip}-->
+    <!-- Main configuration -->
+    <!--{assign var="borderLeft" value="20"}-->
+    <!--{assign var="borderRight" value="25"}-->
+    <!--{assign var="paperWidth" value="210"}-->
+    <!--{assign var="paperHeight" value="297"}-->
+
+    <!--{/strip}-->
+    
+    <templates>
+    	
+    	<!-- Page templates -->
+        <templates>
+            <template name="template1" filename="<!--{$backgroundPdf}-->" page="1" />
+        </templates>
+        
+        <pagebackgrounds>
+        	<allpages template="template1" />
+        </pagebackgrounds>
+        		
+    </templates>
+    
+    <meta>
+    	<author><!--{$shopOperatorContact.name}--></author>
+		<creator><!--{$creator}--></creator>
+		<keywords><!--{$keywords}--></keywords>
+		<subject><!--{"voucher"|ll}--></subject>
+		<title><!--{"voucher"|ll}--></title>
+    </meta>
+    
+    <header>
+    
+    	<firstpage>
+    		<addmarks />
+    	</firstpage>
+    	
+    	<oddpages>
+    		<addmarks />
+    	</oddpages>
+    	
+    </header>
+    
+    <footer>
+    
+    	<allpages>
+        	<setxy x="<!--{$paperWidth-$borderRight-80}-->" y="270" />
+        	<cell w="80" align="R"><!--{"page"|ll:"###CURRENTPAGENO###"}--></cell>
+    	</allpages>
+    
+    </footer>
+    
+    <content>
+        <addpage />
+        <!-- Falz und Lochmarken -->
+        <setmargins left="<!--{$borderLeft}-->" top="30" right="<!--{$borderRight}-->"/>
+        <setheight h="5"/>
+
+        <!-- Absender -->
+        <setfont family="Arial" style="" size="8" />
+        <cell x="<!--{$borderLeft}-->" y="50" w="85" align="C"><!--{$shopOperatorContact.name}--> | <!--{$shopOperatorContact.streetNo}--> | <!--{$shopOperatorContact.zip}--> <!--{$shopOperatorContact.city}--></cell>
+        <line x1="<!--{$borderLeft}-->" y1="55" length="85" orientation="h" />
+
+
+        <!-- Ueberschrift -->
+        <setfont family="Arial" style="B" size="16" />
+        <text x="<!--{$borderLeft}-->" y="100"><!--{"voucher"|ll}--></text>
+
+        <!-- Datum, Gutschriftscode und Gültig bis -->
+        <setfont family="Arial" style="" size="10" />
+        <setxy x="<!--{$borderLeft}-->" y="110" />
+        <write><!--{"date"|ll}-->:</write>
+        <setxy x="50" y="110" />
+        <write><!--{$date|date_format:"%d.%m.%y"}--></write>
+        <setxy x="<!--{$borderLeft}-->" y="120" />
+        <write><!--{"amount"|ll}-->: </write>
+        <setxy x="50" y="120" />
+        <write><!--{$amount|wrap:"| €"}--> </write>
+        <setxy x="<!--{$borderLeft}-->" y="130" />
+        <write><!--{"voucherCode"|ll}-->: </write>
+        <setxy x="50" y="130" />
+        <write><!--{$voucherCode}--></write>
+        <ln />
+		<!--{if $validUntil}-->
+	        <write><!--{"validUntil"|ll}-->: <!--{$validUntil}--></write><ln />
+		<!--{/if}-->
+
+        <ln />
+        <ln />
+        <line x1="<!--{$borderLeft}-->" x2="<!--{$paperWidth-$borderRight}-->"/>
+
+		
+		<!-- Questions? -->
+        <write><!--{"questionsNote"|ll:$shopOperatorContact.email:$contactPhoneNumber}--></write>
+       
+    </content>
+</document>

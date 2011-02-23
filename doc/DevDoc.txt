@@ -1,0 +1,32 @@
+Wichtige Punkte, die nicht vergessen werden sollten
+===================================================
+ToDo: Stand 01.07.2009
+==== 
+     
+v0.0.1dev:
+----------
++ (ry96)
+  BUG: fixed typo in tca.php
++ (ry25)
+	+ added column type to gsavoucher
+	+ added select for vouchertype to tca
+	+ vouchertype 0 is standard voucher - vouchertype is a "multi encache voucher" 
++ (ry42) class.tx_ptgsavoucher_hooks_ptgsashop_pi3: devlog Änderung 
+    + tx_ptgsavoucher_hooks_ptgsashop_gsaOrderPresentator: Bugfix typoscriptRegistry
+    + tx_ptgsavoucher_hooks_ptgsashop_gsaTransactionHandler: new Parameter orderObj
++ (ry42) + class.tx_ptgsavoucher_hooks_ptgsashop_pi3: processOrderOverview_checkoutHook(): load voucher for voucherEncash in every case if allready encashed delete from encashCollection 
+    set addData and addDataType in paymentModifier, remove set_articleUid
+    + tx_ptgsavoucher_hooks_ptgsashop_orderProcessor: get voucherEncash from paymentModifierCollection 
+    + tx_ptgsavoucher_hooks_ptgsashop_orderPresentator: remove formatPriceString, load encashCollection in session 
+    + tx_ptgsavoucher_hooks_ptgsashop_gsaTransactionHandler: Bugfix wrong calculation for Totaldiscounts 
+    + tx_ptgsavoucher_sessionVoucherEncashCollection:New Method load 
+    + tx_ptgsavoucher_sessionVoucherEncashCollection::getEncashableAmount: check if encashAmount is greater than totalOrderAmount
+    + tx_ptgsavoucher_voucherEncash:getEncashableAmount: amount not set if no article Confinement
+    + tx_ptgsavoucher_voucherEncash:get_voucherObj(): New Parameter lazyLoading to avoid it in some cases
+    + ext_localconf.php: fixFinalOrderHook now in tx_ptgsashop_orderProcessor
+    + new class tx_ptgsashop_orderPresentator for fixFinalOrderHook only orderWrapper is now delivered in params
+    + tx_ptgsavoucher_voucherEncash:tx_ptgsavoucher_hooks_ptgsashop_pi3: set encashAmount to totalOrderAmount if enashAmount > totalOrderAmount 
+      add devlog entries
++ (ry42) hooks/locallang.xml: Bugfix Textchanges 
++ (ry42) tx_ptgsavoucher_hooks_ptgsashop_gsaTransactionHandler: Bugfix Instaniate voucherCollection if not in session
+         tx_ptgsavoucher_hooks_ptgsashop_pi3: processOrderSubmission_fixFinalOrderHook: delete Collection if not NULL

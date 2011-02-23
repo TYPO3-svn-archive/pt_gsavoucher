@@ -1,0 +1,48 @@
+{* Smarty *}
+{* Default template for pt_gsavoucher "Additional Billing Data for Order Overview"; Author: Dorit Rottner <rottner@punkt.de>, since 2008-10-16 *}
+
+  {****** Voucher specific stuff ******}
+  {if $cond_encashVoucher}
+        <tr>
+        <td colspan="2">
+            <form action="{$faction_orderPage}" method="post" class="tx-ptgsashop-pi3-formdefault">
+        <table class="tx-ptgsashop-pi3-tablefixed">
+            <tr>
+            <td class="tx-ptgsashop-pi3-tableheader">
+                <span class="tx-ptgsashop-pi3-txt1">{"fl_voucher_code"|ll} &nbsp;&nbsp;&nbsp;
+                    <input type="text" name="{$fname_voucher_code}" value="{$fval_voucher_code}" />
+                </span>
+            </td>
+            <td class="tx-ptgsashop-pi3-tableheader" align="right">
+                <span class="tx-ptgsashop-pi3-buttonspecial-wrap"><input type="submit" name="{$fname_encashVoucherButton}" value="{'bl_encash_voucher'|ll}" class="tx-ptgsashop-pi1-buttonspecial" /></span>
+            </td>
+        </tr>
+        </table>
+        </form>
+        </td>
+        </tr>
+  {/if}      
+  {if $cond_encashedVoucher}        
+  {foreach from=$voucher_encashArr key=key item=encash}
+        <tr>
+            <td class="tx-ptgsashop-pi3-tablecell">
+            <span class="tx-ptgsashop-pi3-txt2">{"fl_encashed_voucher"|ll:$encash.voucher_code}</span>
+            </td>
+            <td class="tx-ptgsashop-pi3-tablecell"  align="right">
+            <span class="tx-ptgsashop-pi3-txt2"> - {$encash.voucher_amount}</span>
+            </td>
+        </tr>
+  {/foreach}
+  {/if}      
+
+  {if $cond_additionalDeliveryData}
+        <tr>
+            <td colspan="2" class="tx-ptgsashop-pi3-tablecell">
+                <p class="tx-ptgsashop-pi3-txt2">
+                  {"fl_delivery_notice"|ll}
+                </p>
+            </td>
+        </tr>
+  {/if}        
+
+{* debug *}

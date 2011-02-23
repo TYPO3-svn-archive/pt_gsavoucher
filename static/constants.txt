@@ -1,0 +1,94 @@
+/* 
+possible subcategories: 
+----------------------
+enable      Used for options that enable or disable primary functions of a template
+dims        Dimensions of all kinds; pixels, widths, heights of images, frames, cells and so on.
+file        Files like background images, fonts and so on. Other options related to the file may also enter
+typo        Typography and related constants
+color       Color setup. Many colors will be found with related options in other categories though.
+links       Links: Targets typically
+language    Language specific options.
+Subcategories based on the default content elements:
+cheader,cheader_g,ctext,ctextpic,cimage,cbullets,ctable,cuploads,cmultimedia,cmailform,csearch,clogin,csplash,cmenu,cshortcut,clist,cscript,chtml
+These are all categories reserved for options that relate to content rendering for each type of tt_content element. See static_template "content (default)" and "styles.content (default)" for examples.
+
+possible data types (type=):
+---------------------------
+int [low-high]              integer, opt. in range "low" to "high"
+int+                        positive integer
+offset [L1,L2,...L6]        comma-separated integers. Default is "x,y", but as comma separated parameters in brackets you can specify up to 6 labels being comma separated! If you wish to omit one of the last 4 fields, just don't enter a label for that element.
+color                       HTML color
+wrap                        HTML-code that is wrapped around some content.
+options [item1,item2,...]   Selectbox with values/labels item1, item2 etc. Commaseparated. Split by "=" also and in that case, first part is label, second is value
+boolean [truevalue]         Boolean, opt. you can define the value of "true", def.=1
+comment                     Boolean, checked= "", not-checked = "#".
+file [ext-list/IMAGE_EXT]   Selectorbox with resources. Opt. list allowed extensions (no space in list!), eg. "[ttf]" or "[txt,html,htm]". You can also enter "[IMAGE_EXT]" in which case the default image-extensions are listed. (used for datatype "imgResouce")
+string (the default)        Just a string value
+*/ 
+
+
+// Configuration for GSA Voucher Extension, accesible through BE constant editor
+plugin.tx_ptgsavoucher {
+    
+    
+  // ***** GENERAL EXTENSION SETTINGS *****
+    
+    // Enable Features
+    # cat=pt_gsavoucher::general/enable/010; type=string; label=Creator: Creator of the Voucher PDF Document.
+    additionalMarkers.creator = GSA: pt_gsavoucher
+
+    # cat=pt_gsavoucher::general/enable/020; type=string; label=keywords: Keywords for the Document.
+    additionalMarkers.keywords = voucher, shop
+    
+    # cat=pt_gsavoucher::general/enable/030; type=string; label=Contact Phonenumber: Phonenumber of Contact printed on the voucher Document.
+    additionalMarkers.contactPhoneNumber = 
+    
+    
+    // Dimension settings
+    
+    
+    // Other settings
+    
+    
+    
+    
+    // Language settings
+    
+    
+    
+  
+  
+    // File settings
+    
+    # cat=pt_gsavoucher::file/file/010; type=file[html,htm,tmpl,tpl,txt]; label=Voucher input form: The template file to be used to input gift vouchers (template for the Smarty templating engine).
+    templateVoucherInputForm = EXT:pt_gsavoucher/res/smarty_tpl/voucherInputForm.tpl.html
+    
+    # cat=pt_gsavoucher::file/file/020; type=file[xml]; label=Voucher PDF Template: The template file to be used to generate the Voucher PDF Document (template for the Smarty templating engine).
+    templateVoucherPDF = EXT:pt_gsavoucher/res/smarty_tpl/voucherpdf.tpl.xml
+
+    # cat=pt_gsavoucher::file/file/030; type=file[html,htm,tmpl,tpl,txt]; label=Additonal Data order overview: Additional Billing Data for the order overview template. The template file to be used for the single order overview display of pi3/pi4 (template for the Smarty templating engine).
+    templateFileOrderOverview_additionalData = EXT:pt_gsavoucher/res/smarty_tpl/orderoverview_additionalData.tpl.html
+
+    # cat=pt_gsavoucher::file/file/040; type=file[html,htm,tmpl,tpl,txt]; label=Additional Data Final Order Email: Additional Billing Data for the Final Order Email Template from gsashop. The template file to be used for the mailing of an final order of pi3 (template for the Smarty templating engine). NOTE: This template's contents will be sent by email with the charset encoding 'iso-8859-15'. If you're using an individual template please make sure to set the correct charset used by your template at the 'templateCharsetFinalOrderMail' option below, too!
+    templateFileFinalOrderMail_additionalData = EXT:pt_gsavoucher/res/smarty_tpl/finalorder_additionalData_utf8.tpl.txt
+
+    # cat=pt_gsavoucher::file/file/060; type=file[xml]; label=Additional Data Final Order Email: Additional Billing Data for the Final Order Email Template from gsashop. The template file to be used for the mailing of an final order of pi3 (template for the Smarty templating engine). NOTE: This template's contents will be sent by email with the charset encoding 'iso-8859-15'. If you're using an individual template please make sure to set the correct charset used by your template at the 'templateCharsetFinalOrderMail' option below, too!
+    templateFileInvoice_additionalData = EXT:pt_gsavoucher/res/smarty_tpl/invoice_additionalData.xml
+
+    # cat=pt_gsavoucher::file/file/070; type=file[xml]; label=PDF background: The bakground PDF file with copmany logo and information
+    backgroundPDF = EXT:pt_gsapdfdocs/res/smarty_tpl/background.pdf
+
+    # cat=pt_gsavoucher::file/file/080; type=file[xml]; label=Voucher PDF Locallang: The locallang file to be used for the Voucher PDF Document.
+    voucherPdfLL = EXT:pt_gsavoucher/res/voucherpdf_locallang.xml
+
+    # cat=pt_gsavoucher::file/file/090; type=string; label=Voucher Path: The path to the Voucher PDF Document.
+    voucherPath = fileadmin/vouchers/###GSAUID###_###VOUCHERCODE###.pdf
+
+    # cat=pt_gsavoucher::file/file/110; type=file[css]; label=Css file: The file with css definitions for smarty form handling.
+	cssFile = EXT:pt_gsavoucher/res/css/tx_ptgsavoucher.css 
+    
+    # cat=pt_gsavoucher::file/120; type=file[xml]; label=Locallang file: The file with locallang labels for the Documents to be generated 
+    languageFile = EXT:pt_gsavoucher/res/hooks/locallang.xml 
+
+    
+}

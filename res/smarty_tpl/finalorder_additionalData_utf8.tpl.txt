@@ -1,0 +1,13 @@
+﻿{* Smarty *}{strip}
+{* Default UTF-8 encoded template for pt_gsashop "Final order confirmation mail"; Author: Rainer Kuhn <kuhn@punkt.de>, since 2006-03-22 *}
+{***** IMPORTANT: Template changes must maintain the line length of 72 chars and the delivery table structure for correct display! *****}
+{***** IMPORTANT: Since this is a plain text template every blank and linebreak used for template placeholders will be displayed! *****}
+{/strip}
+{if $cond_additionalPaymentModifierData}
+{foreach from=$voucher_encashArr key=key item=encash}
+{$encash.voucher_code}: EUR {$encash.voucher_amount}  
+{/foreach}========================================================================{/if}
+{if $cond_additionalDeliveryData}
+{"fl_delivery_notice_mail1"|ll}
+{"fl_delivery_notice_mail2"|ll}
+{/if}

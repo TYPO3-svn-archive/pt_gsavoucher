@@ -1,0 +1,20 @@
+// settings for pi2 (Handle voucher plugin)
+plugin.tx_ptgsavoucher_pi2 {
+    templateFileVoucherInputForm = {$plugin.tx_ptgsavoucher.templateVoucherInputForm}
+    //jsOutstandingItems = {$plugin.tx_ptgsavoucher.jsOutstandingItems}
+    cssFile = {$plugin.tx_ptgsavoucher.cssFile}
+}
+
+config.tx_ptgsavoucher {
+    additionalMarkers.creator = {$plugin.tx_ptgsavoucher.additionalMarkers.creator}
+    additionalMarkers.keywords = {$plugin.tx_ptgsavoucher.additionalMarkers.keywords}
+    additionalMarkers.contactPhoneNumber = {$plugin.tx_ptgsavoucher.additionalMarkers.contactPhoneNumber}
+    templateFileOrderOverview_additionalData = {$plugin.tx_ptgsavoucher.templateFileOrderOverview_additionalData}
+    templateFileFinalOrderMail_additionalData = {$plugin.tx_ptgsavoucher.templateFileFinalOrderMail_additionalData}
+    templateFileInvoice_additionalData = {$plugin.tx_ptgsavoucher.templateFileInvoice_additionalData}
+    voucherPdfLL = {$plugin.tx_ptgsavoucher.voucherPdfLL}
+    voucherPath = {$plugin.tx_ptgsavoucher.voucherPath}
+    templateVoucherPDF = {$plugin.tx_ptgsavoucher.templateVoucherPDF}
+    backgroundPDF = {$plugin.tx_ptgsavoucher.backgroundPDF}
+    languageFile = {$plugin.tx_ptgsavoucher.languageFile}
+}
